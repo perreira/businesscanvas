@@ -1,0 +1,337 @@
+%% Document template for Lean Business Canvas
+\documentclass[landscape]{article}
+\usepackage{xcoffins}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage[a3paper,margin=3cm,bindingoffset=0cm,ignoreall,ratio=1:1]{geometry}
+\usepackage{calc}
+
+%% Set Fonts
+% Needs to come before polyglossia, else TeXlive 2024 breaks and does not find the fonts...
+\usepackage{fontspec}
+\setmainfont{IBM Plex Serif}
+\setsansfont{IBM Plex Sans}
+\setmonofont{IBM Plex Mono}
+
+%% Default to Sans
+\renewcommand{\familydefault}{\sfdefault} 
+
+% Load spelling/hyphenation, set language to english
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\setmainlanguage{english}
+
+%% Define colors
+\definecolor{generaldarkblue}{HTML}{233A59}
+\definecolor{generallightblue}{HTML}{5E9FF2}
+\definecolor{generaldarkorange}{HTML}{BF7330}
+\definecolor{generallightorange}{HTML}{D9933D}
+
+\setlength{\fboxsep}{1em}
+
+%%%%%%%%%%%% HERE COMES YOUR DATA %%%%%%%%%%%%%%%%%
+\newcommand{\myprojectname}{
+% The name of your company/project
+My super awesome startup
+}
+
+\newcommand*{\mypartners}{%
+% Describe your partners
+\begin{itemize}
+    \item Batman
+    \item Superman
+\end{itemize}
+}
+
+\newcommand{\myactivities}{
+% Describe your activities
+\begin{itemize}
+    \item Steal underpants
+    \item \ldots
+    \item Profit
+\end{itemize}
+}
+
+\newcommand{\myressources}{
+% Describe your ressources
+\begin{itemize}
+    \item Many underpants
+\end{itemize}
+}
+
+\newcommand{\myvalue}{
+% Define your value proposition
+By stealing underpants we create sustainable shareholder value on a global market, scaling the underpants value on the blockchain with AI.
+
+Unlike traditional Feinripp, \myprojectname\ will be the Uber of underpants.
+
+}
+
+\newcommand{\myrelations}{
+% Define the relationships with your customer
+\begin{itemize}
+    \item Deliver Underpants
+\end{itemize}
+}
+
+\newcommand{\mychannels}{
+% Define the channels to your customers and stakeholders
+\begin{itemize}
+    \item Underpants as a service over IP
+\end{itemize}
+}
+
+\newcommand{\mycustomers}{
+% Define your customer segment
+High end Underpant-Wearers
+}
+
+\newcommand{\mycosts}{
+% Describe your cost structure
+Cost of underpants
+}
+
+\newcommand{\myrevenue}{
+% Describe your revenue streams
+Reoccuring revenue from Underpants as a service
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% you can ignore everything below %%%
+
+\begin{document}
+
+\NewCoffin\MyTitle%
+\SetVerticalCoffin\MyTitle{\textwidth}{\colorbox{generaldarkblue}{\makebox(\textwidth-2\fboxsep,2cm-2\fboxsep){\huge\textcolor{white}{\textbf{%
+%% COMPANY NAME GOES HERE %%%
+\myprojectname
+}}}}}
+
+%
+
+%
+\NewCoffin\MyPartnersHead
+\SetVerticalCoffin\MyPartnersHead{0.2\textwidth}{%
+\colorbox{generaldarkblue!85}{%
+\makebox(0.2\textwidth-2\fboxsep,1cm-2\fboxsep){
+\textcolor{white}{\large\bfseries %
+Partners% LEAN: Problem
+}% end textcolor
+}% end makebox
+}% end colorbox
+}% end coffin
+%
+%
+\NewCoffin\MyPartners
+\SetVerticalCoffin\MyPartners{0.2\textwidth}{\colorbox{generallightblue!15}{%
+\parbox[t][13cm-2\fboxsep][t]{0.2\textwidth-2\fboxsep}{%
+\mypartners
+}%
+}}%
+
+\NewCoffin\MyActivitiesHead
+\SetVerticalCoffin\MyActivitiesHead{0.2\textwidth}{\colorbox{generaldarkorange!85}{%
+\makebox(0.2\textwidth-2\fboxsep,1cm-2\fboxsep){
+\textcolor{white}{\large\bfseries %
+Activities% LEAN: Solution% 
+}% end textcolor
+}% end makebox
+}% end colorbox
+}% end coffin
+%
+%
+\NewCoffin\MyActivities
+\SetVerticalCoffin\MyActivities{0.2\textwidth}{\colorbox{generallightorange!15}{%
+\parbox[t][6cm-2\fboxsep][t]{0.2\textwidth-2\fboxsep}{%
+\myactivities
+}%
+}}%
+%
+\NewCoffin\MyRessourcesHead
+\SetVerticalCoffin\MyRessourcesHead{0.2\textwidth}{\colorbox{generaldarkorange!85}{%
+\makebox(0.2\textwidth-2\fboxsep,1cm-2\fboxsep){
+\textcolor{white}{\large\bfseries %
+Ressources% LEAN: Metrics% 
+}% end textcolor
+}% end makebox
+}% end colorbox
+}% end coffin
+%
+\NewCoffin\MyRessources
+\SetVerticalCoffin\MyRessources{0.2\textwidth}{\colorbox{generallightorange!15}{%
+\parbox[t][6cm-2\fboxsep][t]{0.2\textwidth-2\fboxsep}{%
+\myressources
+}%
+}}%
+%
+\NewCoffin\MyVPHead
+\SetVerticalCoffin\MyVPHead{0.2\textwidth}{\colorbox{generaldarkblue!85}{%
+\makebox(0.2\textwidth-2\fboxsep,1cm-2\fboxsep){
+\textcolor{white}{\large\bfseries %
+Value Proposition% 
+}% end textcolor
+}% end makebox
+}% end colorbox
+}% end coffin
+\NewCoffin\MyVP
+\SetVerticalCoffin\MyVP{0.2\textwidth}{\colorbox{generallightblue!15}{%
+\parbox[t][13cm-2\fboxsep][t]{0.2\textwidth-2\fboxsep}{%
+\myvalue
+}%
+}}%
+%
+%
+\NewCoffin\MyRelsHead
+\SetVerticalCoffin\MyRelsHead{0.2\textwidth}{\colorbox{generaldarkorange!85}{%
+\makebox(0.2\textwidth-2\fboxsep,1cm-2\fboxsep){
+\textcolor{white}{\large\bfseries %
+Relationship% LEAN: Unfair advantage% 
+}% end textcolor
+}% end makebox
+}% end colorbox
+}% end coffin
+%
+%
+\NewCoffin\MyRels
+\SetVerticalCoffin\MyRels{0.2\textwidth}{\colorbox{generallightorange!15}{%
+\parbox[t][6cm-2\fboxsep][t]{0.2\textwidth-2\fboxsep}{%
+\myrelations
+}%
+}}%
+%
+\NewCoffin\MyChannelsHead
+\SetVerticalCoffin\MyChannelsHead{0.2\textwidth}{\colorbox{generaldarkorange!85}{%
+\makebox(0.2\textwidth-2\fboxsep,1cm-2\fboxsep){
+\textcolor{white}{\large\bfseries %
+Channels% 
+}% end textcolor
+}% end makebox
+}% end colorbox
+}% end coffin
+%
+\NewCoffin\MyChannels
+\SetVerticalCoffin\MyChannels{0.2\textwidth}{\colorbox{generallightorange!15}{%
+\parbox[t][6cm-2\fboxsep][t]{0.2\textwidth-2\fboxsep}{%
+\mychannels
+}%
+}}%
+%
+\NewCoffin\MyCuSegHead
+\SetVerticalCoffin\MyCuSegHead{0.2\textwidth}{%
+\colorbox{generaldarkblue!85}{%
+\makebox(0.2\textwidth-2\fboxsep,1cm-2\fboxsep){
+\textcolor{white}{\large\bfseries %
+Customer Segment% LEAN: Problem
+}% end textcolor
+}% end makebox
+}% end colorbox
+}% end coffin
+%
+%
+\NewCoffin\MyCuSeg
+\SetVerticalCoffin\MyCuSeg{0.2\textwidth}{\colorbox{generallightblue!15}{%
+\parbox[t][13cm-2\fboxsep][t]{0.2\textwidth-2\fboxsep}{%
+\mycustomers
+}%
+}}%
+
+%
+\NewCoffin\MyCostsHead
+\SetVerticalCoffin\MyCostsHead{0.5\textwidth}{%
+\colorbox{generaldarkorange!85}{%
+\makebox(0.5\textwidth-2\fboxsep,1cm-2\fboxsep){
+\textcolor{white}{\large\bfseries %
+Cost Structure% LEAN: Problem
+}% end textcolor
+}% end makebox
+}% end colorbox
+}% end coffin
+%
+%
+\NewCoffin\MyCosts
+\SetVerticalCoffin\MyCosts{0.5\textwidth}{\colorbox{generallightorange!15}{%
+\parbox[t][6cm-2\fboxsep][t]{0.5\textwidth-2\fboxsep}{%
+\mycosts
+}%
+}}%
+\NewCoffin\MyRevenueHead
+\SetVerticalCoffin\MyRevenueHead{0.5\textwidth}{%
+\colorbox{generaldarkblue!85}{%
+\makebox(0.5\textwidth-2\fboxsep,1cm-2\fboxsep){
+\textcolor{white}{\large\bfseries %
+Revenue Stream% LEAN: Problem
+}% end textcolor
+}% end makebox
+}% end colorbox
+}% end coffin
+%
+%
+\NewCoffin\MyRevenue
+\SetVerticalCoffin\MyRevenue{0.5\textwidth}{\colorbox{generallightblue!15}{%
+\parbox[t][6cm-2\fboxsep][t]{0.5\textwidth-2\fboxsep}{%
+\myrevenue
+}%
+}}%
+
+
+
+
+
+\NewCoffin\MyColOne{}
+\SetHorizontalCoffin\MyColOne{}
+\JoinCoffins\MyColOne[l,b]\MyPartnersHead[l,t]
+\JoinCoffins\MyColOne[l,b]\MyPartners[l,t]
+
+\NewCoffin\MyColTwo{}
+\SetHorizontalCoffin\MyColTwo{}
+\JoinCoffins\MyColTwo\MyActivitiesHead
+\JoinCoffins\MyColTwo[l,b]\MyActivities[l,t]
+\JoinCoffins\MyColTwo[l,b]\MyRessourcesHead[l,t]
+\JoinCoffins\MyColTwo[l,b]\MyRessources[l,t]
+
+\NewCoffin\MyColThree{}
+\SetHorizontalCoffin\MyColThree{}
+\JoinCoffins\MyColThree\MyVPHead
+\JoinCoffins\MyColThree[l,b]\MyVP[l,t]
+
+\NewCoffin\MyColFour{}
+\SetHorizontalCoffin\MyColFour{}
+\JoinCoffins\MyColFour\MyRelsHead
+\JoinCoffins\MyColFour[l,b]\MyRels[l,t]
+\JoinCoffins\MyColFour[l,b]\MyChannelsHead[l,t]
+\JoinCoffins\MyColFour[l,b]\MyChannels[l,t]
+
+\NewCoffin\MyColFive{}
+\SetHorizontalCoffin\MyColFive{}
+\JoinCoffins\MyColFive\MyCuSegHead
+\JoinCoffins\MyColFive[l,b]\MyCuSeg[l,t]
+
+
+\NewCoffin\MyRowOne{}
+\JoinCoffins\MyRowOne\MyColOne
+\JoinCoffins\MyRowOne[t,r]\MyColTwo[t,l]
+\JoinCoffins\MyRowOne[t,r]\MyColThree[t,l]
+\JoinCoffins\MyRowOne[t,r]\MyColFour[t,l]
+\JoinCoffins\MyRowOne[t,r]\MyColFive[t,l]
+
+\NewCoffin\MyColSix{}
+\SetHorizontalCoffin\MyColSix{}
+\JoinCoffins\MyColSix\MyCostsHead
+\JoinCoffins\MyColSix[l,b]\MyCosts[l,t]
+\NewCoffin\MyColSeven{}
+\SetHorizontalCoffin\MyColSeven{}
+\JoinCoffins\MyColSeven\MyRevenueHead
+\JoinCoffins\MyColSeven[l,b]\MyRevenue[l,t]
+
+\NewCoffin\MyRowTwo{}
+\JoinCoffins\MyRowTwo\MyColSix
+\JoinCoffins\MyRowTwo[t,r]\MyColSeven[t,l]
+
+
+%% Glue everything together
+\NewCoffin\MyOutputCoffin{}%
+\JoinCoffins\MyOutputCoffin\MyTitle
+\JoinCoffins\MyOutputCoffin[l,b]\MyRowOne[l,t]
+\JoinCoffins\MyOutputCoffin[l,b]\MyRowTwo[l,t]
+
+\TypesetCoffin\MyOutputCoffin
+\end{document}
